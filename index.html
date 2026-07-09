@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Milzon — Executive CV | Transformation & Business Leadership</title>
+<meta name="description" content="Interactive executive CV of Muhammad Milzon — 20+ years leading large-scale delivery, CAPEX optimization, and data-driven transformation across APAC & Africa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0f1c;
+  --panel:#101a30;
+  --panel2:#152238;
+  --ink:#eef3fb;
+  --muted:#9aa8c4;
+  --gold:#d9a441;
+  --gold-soft:#f0c976;
+  --line:rgba(255,255,255,.09);
+  --green:#1ebe7a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.7;
+}
+::selection{background:var(--gold);color:#1a1206}
+
+.container{max-width:1040px;margin:0 auto;padding:0 22px}
+
+/* ---------- NAV ---------- */
+nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(10,15,28,.85);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  max-width:1040px;margin:0 auto;padding:14px 22px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+}
+.logo{font-family:'Fraunces',serif;font-weight:700;font-size:18px;letter-spacing:.02em}
+.logo span{color:var(--gold-soft)}
+.nav-links{display:flex;gap:22px;font-size:13.5px;font-weight:600}
+.nav-links a{color:var(--muted);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--gold-soft)}
+@media(max-width:720px){.nav-links{display:none}}
+.nav-cta{
+  font-size:13px;font-weight:700;text-decoration:none;
+  background:linear-gradient(135deg,var(--gold),var(--gold-soft));
+  color:#1a1206;padding:9px 18px;border-radius:999px;
+}
+
+/* ---------- HERO / DASHBOARD ---------- */
+.hero{padding:72px 0 56px;position:relative;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(700px 380px at 75% -10%,rgba(217,164,65,.10),transparent 65%);
+  pointer-events:none;
+}
+.status{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--green);border:1px solid rgba(30,190,122,.35);
+  padding:7px 15px;border-radius:999px;margin-bottom:26px;
+}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+h1{
+  font-family:'Fraunces',serif;
+  font-size:clamp(38px,6vw,64px);
+  font-weight:600;line-height:1.08;letter-spacing:-.015em;
+  margin-bottom:18px;
+}
+h1 em{font-style:normal;color:var(--gold-soft)}
+.tagline{font-size:clamp(16px,2.2vw,19px);color:var(--muted);max-width:640px;margin-bottom:14px}
+.tagline b{color:var(--ink)}
+.hero-contact{font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 20px;margin-bottom:44px}
+.hero-contact a{color:var(--gold-soft);text-decoration:none}
+
+/* KPI dashboard strip */
+.kpis{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:14px;
+}
+@media(max-width:820px){.kpis{grid-template-columns:repeat(2,1fr)}}
+.kpi{
+  background:var(--panel);border:1px solid var(--line);border-radius:16px;
+  padding:22px 20px;position:relative;overflow:hidden;
+}
+.kpi::after{
+  content:"";position:absolute;left:0;top:0;height:3px;width:100%;
+  background:linear-gradient(90deg,var(--gold),transparent 80%);
+  opacity:.7;
+}
+.kpi .num{
+  font-family:'Fraunces',serif;font-size:clamp(28px,3.6vw,40px);
+  font-weight:700;color:var(--gold-soft);letter-spacing:-.02em;line-height:1.1;
+}
+.kpi .lbl{font-size:12.5px;color:var(--muted);margin-top:6px;font-weight:600;letter-spacing:.03em}
+
+/* ---------- HERO ACTIONS / SOCIAL ---------- */
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:44px}
+.btn-social{
+  display:inline-flex;align-items:center;gap:7px;text-decoration:none;
+  font-size:13.5px;font-weight:700;color:var(--muted);
+  border:1px solid var(--line);border-radius:12px;padding:12px 18px;
+  transition:color .2s,border-color .2s;
+}
+.btn-social:hover{color:var(--gold-soft);border-color:rgba(217,164,65,.5)}
+.btn-social b{
+  font-size:11px;background:var(--panel2);border-radius:4px;padding:2px 5px;
+}
+
+/* ---------- ARTICLES ---------- */
+.article-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:820px){.article-grid{grid-template-columns:1fr}}
+.article-card{
+  display:block;text-decoration:none;background:var(--panel);
+  border:1px solid var(--line);border-radius:16px;padding:24px 22px;
+  transition:border-color .2s,transform .15s;
+}
+.article-card:hover{border-color:rgba(217,164,65,.5);transform:translateY(-3px)}
+.article-card .date{
+  font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:10px;
+}
+.article-card h4{font-family:'Fraunces',serif;font-size:17px;color:var(--ink);line-height:1.35;margin-bottom:8px}
+.article-card p{font-size:13.5px;color:var(--muted)}
+.article-card .read{font-size:13px;font-weight:700;color:var(--gold-soft);margin-top:14px;display:inline-block}
+
+/* ---------- SECTION SHELL ---------- */
+section{padding:64px 0}
+.eyebrow{
+  font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:12px;
+}
+h2{
+  font-family:'Fraunces',serif;font-size:clamp(26px,4vw,36px);
+  font-weight:600;letter-spacing:-.01em;margin-bottom:18px;line-height:1.2;
+}
+.section-sub{color:var(--muted);max-width:680px;margin-bottom:36px;font-size:15.5px}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .status::before{animation:none}
+}
+
+/* ---------- SUMMARY ---------- */
+.summary-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:28px}
+@media(max-width:820px){.summary-grid{grid-template-columns:1fr}}
+.summary-main p{font-size:16px;color:var(--ink);margin-bottom:16px}
+.summary-main p b{color:var(--gold-soft)}
+.bridge{
+  background:linear-gradient(135deg,rgba(217,164,65,.10),rgba(217,164,65,.03));
+  border:1px solid rgba(217,164,65,.3);border-radius:18px;padding:26px;
+}
+.bridge h3{font-family:'Fraunces',serif;font-size:19px;margin-bottom:12px;color:var(--gold-soft)}
+.bridge ul{list-style:none;display:grid;gap:11px}
+.bridge li{font-size:14px;color:var(--muted);padding-left:24px;position:relative}
+.bridge li::before{content:"→";position:absolute;left:0;color:var(--gold)}
+.bridge li b{color:var(--ink)}
+
+/* ---------- ACHIEVEMENTS ---------- */
+.filter-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.chip{
+  font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;
+  background:var(--panel);color:var(--muted);
+  border:1px solid var(--line);border-radius:999px;padding:9px 20px;
+  transition:all .2s;
+}
+.chip:hover{border-color:rgba(217,164,65,.5)}
+.chip.active{background:var(--gold);color:#1a1206;border-color:var(--gold)}
+.ach-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(max-width:720px){.ach-grid{grid-template-columns:1fr}}
+.ach{
+  background:var(--panel);border:1px solid var(--line);border-radius:16px;
+  padding:22px;transition:opacity .3s,transform .3s;
+}
+.ach.hide{display:none}
+.ach .metric{
+  font-family:'Fraunces',serif;font-size:26px;font-weight:700;
+  color:var(--gold-soft);margin-bottom:6px;
+}
+.ach h4{font-size:15px;margin-bottom:7px}
+.ach p{font-size:13.5px;color:var(--muted)}
+.ach .cat{
+  display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--gold);margin-top:12px;
+  border:1px solid rgba(217,164,65,.3);padding:3px 10px;border-radius:999px;
+}
+
+/* ---------- TIMELINE ---------- */
+.timeline{position:relative;padding-left:30px}
+.timeline::before{
+  content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;
+  background:linear-gradient(180deg,var(--gold) 0%,rgba(217,164,65,.15) 100%);
+}
+.role{position:relative;margin-bottom:16px}
+.role::before{
+  content:"";position:absolute;left:-28px;top:22px;
+  width:14px;height:14px;border-radius:50%;
+  background:var(--bg);border:3px solid var(--gold);
+}
+.role-head{
+  width:100%;text-align:left;cursor:pointer;font-family:inherit;color:var(--ink);
+  background:var(--panel);border:1px solid var(--line);border-radius:14px;
+  padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:14px;
+  transition:border-color .2s,background .2s;
+}
+.role-head:hover{border-color:rgba(217,164,65,.45);background:var(--panel2)}
+.role-head .t h4{font-size:16px;font-weight:700}
+.role-head .t p{font-size:13px;color:var(--muted);margin-top:2px}
+.role-head .yr{
+  flex:none;font-size:12.5px;font-weight:700;color:var(--gold-soft);
+  white-space:nowrap;
+}
+.role-head .arrow{flex:none;color:var(--muted);transition:transform .25s;font-size:13px}
+.role.open .arrow{transform:rotate(180deg)}
+.role-body{
+  max-height:0;overflow:hidden;transition:max-height .4s ease;
+  border-left:1px solid var(--line);border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);border-radius:0 0 14px 14px;
+  margin:0 8px;background:rgba(16,26,48,.5);
+}
+.role.open .role-body{max-height:600px}
+.role-body ul{list-style:none;padding:18px 24px 22px;display:grid;gap:10px}
+.role-body li{font-size:14px;color:var(--muted);padding-left:20px;position:relative}
+.role-body li::before{content:"▸";position:absolute;left:0;color:var(--gold)}
+.role-body li b{color:var(--ink)}
+.foundation{
+  margin-top:8px;background:var(--panel);border:1px dashed rgba(217,164,65,.35);
+  border-radius:14px;padding:20px 22px;font-size:14px;color:var(--muted);
+}
+.foundation b{color:var(--ink)}
+
+/* ---------- SKILLS ---------- */
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 40px}
+@media(max-width:720px){.skills-grid{grid-template-columns:1fr}}
+.skill .top{display:flex;justify-content:space-between;font-size:13.5px;font-weight:600;margin-bottom:7px}
+.skill .top span:last-child{color:var(--gold-soft)}
+.skill .track{height:7px;background:rgba(255,255,255,.07);border-radius:999px;overflow:hidden}
+.skill .fill{
+  display:block;height:100%;width:0;
+  background:linear-gradient(90deg,var(--gold),var(--gold-soft));
+  border-radius:999px;transition:width 1.2s cubic-bezier(.2,.7,.3,1);
+}
+
+/* ---------- CERTS & PORTFOLIO ---------- */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media(max-width:820px){.two-col{grid-template-columns:1fr}}
+.list-card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:26px}
+.list-card h3{font-family:'Fraunces',serif;font-size:19px;margin-bottom:16px}
+.list-card ul{list-style:none;display:grid;gap:11px}
+.list-card li{font-size:14px;color:var(--muted);padding-left:22px;position:relative}
+.list-card li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:700}
+.list-card li b{color:var(--ink)}
+.port-link{
+  display:block;text-decoration:none;background:var(--panel);
+  border:1px solid var(--line);border-radius:16px;padding:20px 22px;
+  margin-bottom:12px;transition:border-color .2s,transform .15s;
+}
+.port-link:hover{border-color:rgba(217,164,65,.5);transform:translateY(-2px)}
+.port-link h4{font-size:15px;color:var(--ink);margin-bottom:4px}
+.port-link h4 span{color:var(--gold-soft);font-size:13px;margin-left:6px}
+.port-link p{font-size:13px;color:var(--muted)}
+
+/* ---------- CONTACT ---------- */
+.contact-band{
+  background:linear-gradient(135deg,rgba(217,164,65,.13),rgba(217,164,65,.04));
+  border:1px solid rgba(217,164,65,.3);border-radius:22px;
+  padding:48px 40px;text-align:center;
+}
+@media(max-width:600px){.contact-band{padding:36px 22px}}
+.contact-band h2{margin-bottom:12px}
+.contact-band p{color:var(--muted);max-width:520px;margin:0 auto 28px}
+.btn-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;text-decoration:none;
+  font-weight:700;font-size:15px;padding:14px 28px;border-radius:12px;
+  transition:transform .15s;
+}
+.btn:active{transform:scale(.97)}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#1a1206}
+.btn-line{border:1px solid var(--line);color:var(--ink)}
+
+footer{padding:36px 0 48px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+footer b{color:var(--ink)}
+
+/* ---------- PRINT ---------- */
+@media print{
+  body{background:#fff;color:#111}
+  nav,.contact-band,.btn-row,.filter-row{display:none}
+  .kpi,.ach,.role-head,.list-card,.bridge,.foundation{border-color:#ddd;background:#fff}
+  .role-body{max-height:none !important;background:#fff;border-color:#ddd}
+  h1,h2,.kpi .num,.ach .metric{color:#111}
+  .status{color:#0a7d4f;border-color:#0a7d4f}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="logo">M<span>ilzon</span></div>
+    <div class="nav-links">
+      <a href="#summary">Summary</a>
+      <a href="#achievements">Impact</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#articles">Articles</a>
+    </div>
+    <a class="nav-cta" href="#contact">Let's Talk</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="container">
+    <span class="status">Open to Executive Leadership Roles</span>
+    <h1>Muhammad Milzon<br><em>Transformation &amp; Business Leader</em></h1>
+    <p class="tagline">
+      20+ years leading <b>large-scale delivery, CAPEX optimization, and data-driven transformation</b>
+      across Indonesia, Myanmar, Vietnam, Tanzania &amp; APAC — now bringing that discipline to
+      <b>insurance leadership — agency, distribution &amp; B2B</b>.
+    </p>
+    <div class="hero-contact">
+      <span>📍 Jakarta, Indonesia</span>
+      <a href="mailto:milzon.ltf@gmail.com">milzon.ltf@gmail.com</a>
+      <span>+62 812 6259 1127</span>
+    </div>
+
+    <div class="hero-actions">
+      <a class="btn btn-gold" href="Milzon_CV_ATS.pdf" download>⬇ Download CV (PDF · ATS)</a>
+      <a class="btn-social" href="https://linkedin.com/in/milzon" target="_blank" rel="noopener" aria-label="LinkedIn"><b>in</b> LinkedIn</a>
+      <a class="btn-social" href="https://github.com/Milzon1010" target="_blank" rel="noopener" aria-label="GitHub">⌥ GitHub</a>
+      <a class="btn-social" href="https://instagram.com/milzon.latief.fin" target="_blank" rel="noopener" aria-label="Instagram">◉ Instagram</a>
+    </div>
+
+    <div class="kpis">
+      <div class="kpi"><div class="num" data-count="9800" data-suffix="+">0</div><div class="lbl">Telecom assets managed</div></div>
+      <div class="kpi"><div class="num" data-count="22" data-suffix="%">0</div><div class="lbl">CAPEX savings (BCG program)</div></div>
+      <div class="kpi"><div class="num" data-count="75" data-suffix="%">0</div><div class="lbl">Reporting effort automated</div></div>
+      <div class="kpi"><div class="num" data-count="5" data-suffix="">0</div><div class="lbl">Countries of delivery</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ SUMMARY ============ -->
+<section id="summary">
+  <div class="container reveal">
+    <div class="eyebrow">Executive Summary</div>
+    <h2>Delivery at scale. Decisions by data.</h2>
+    <div class="summary-grid">
+      <div class="summary-main">
+        <p>
+          Senior program and business leader with a proven record directing <b>nationwide rollout,
+          optimization, and transformation programs</b> involving 9,800+ assets, multi-vendor ecosystems,
+          and cross-functional teams of 50+ professionals.
+        </p>
+        <p>
+          My leadership model combines three things: <b>rigorous KPI/SLA governance</b>, disciplined
+          <b>CAPEX &amp; risk control</b> (consistently &lt;5% deviation), and <b>hands-on data capability</b>
+          — Python, SQL, and real-time dashboards that cut reporting bureaucracy by 40–75% and put
+          decisions in front of C-level stakeholders faster.
+        </p>
+        <p>
+          I have led programs alongside <b>Boston Consulting Group</b>, negotiated with C-level
+          stakeholders across telecom operators and vendors, and built teams that deliver under
+          pressure — on time, under budget, with audited compliance.
+        </p>
+      </div>
+      <aside class="bridge">
+        <h3>Why insurance leadership?</h3>
+        <ul>
+          <li><b>Risk management</b> is my native language — SLA recovery, risk tolerance governance, mitigation playbooks.</li>
+          <li><b>High-value B2B negotiation</b> — corporate contracts, vendor tenders, multi-million dollar bids.</li>
+          <li><b>KPI-driven sales enablement</b> — feasibility scoring, conversion targets, pipeline dashboards.</li>
+          <li><b>Data-driven modernization</b> — exactly what insurance B2B portfolios need next.</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACHIEVEMENTS ============ -->
+<section id="achievements">
+  <div class="container reveal">
+    <div class="eyebrow">Impact Dashboard</div>
+    <h2>Measured results, not claims.</h2>
+    <p class="section-sub">Filter by domain — every number below is from an audited, delivered program.</p>
+
+    <div class="filter-row">
+      <button class="chip active" data-filter="all">All</button>
+      <button class="chip" data-filter="leadership">Leadership</button>
+      <button class="chip" data-filter="finance">Cost &amp; Risk</button>
+      <button class="chip" data-filter="data">Data &amp; AI</button>
+      <button class="chip" data-filter="delivery">Delivery</button>
+    </div>
+
+    <div class="ach-grid">
+      <div class="ach" data-cat="finance">
+        <div class="metric">22% CAPEX saved</div>
+        <h4>BCG Transport Optimization — Indosat Ooredoo</h4>
+        <p>Redesigned nationwide IP/MPLS &amp; DWDM topology with Boston Consulting Group; presented directly to C-level steering committee. Closed on time, under budget.</p>
+        <span class="cat">Cost &amp; Risk</span>
+      </div>
+      <div class="ach" data-cat="leadership">
+        <div class="metric">9,800+ assets</div>
+        <h4>Portfolio Lifecycle Leadership — Sumatera</h4>
+        <p>Directed planning &amp; execution across tenant onboarding, collocation, and dismantle programs. Improved CAPEX efficiency 12%, cut go-live time 18%.</p>
+        <span class="cat">Leadership</span>
+      </div>
+      <div class="ach" data-cat="data">
+        <div class="metric">72h → 16h</div>
+        <h4>Escalation Turnaround — Data Center Program</h4>
+        <p>Predictive monitoring, AWS dashboards, and Python automation across 25+ ZTE data centers. 98.5% site readiness, &lt;3% cost deviation.</p>
+        <span class="cat">Data &amp; AI</span>
+      </div>
+      <div class="ach" data-cat="data">
+        <div class="metric">75% automated</div>
+        <h4>SLA Reporting Automation</h4>
+        <p>Python/SQL pipelines and Power BI dashboards replacing manual weekly reporting — faster decision velocity across technical and management levels.</p>
+        <span class="cat">Data &amp; AI</span>
+      </div>
+      <div class="ach" data-cat="delivery">
+        <div class="metric">3,200+ sites</div>
+        <h4>National Rollout — Ooredoo Myanmar</h4>
+        <p>Full-cycle delivery at 100+ sites/month for 2.5 years. Cluster strategy cut transmission failures by 30% across multiple provinces.</p>
+        <span class="cat">Delivery</span>
+      </div>
+      <div class="ach" data-cat="finance">
+        <div class="metric">&lt;5% risk tolerance</div>
+        <h4>National KPI Recovery — TelkomInfra</h4>
+        <p>Directed SLA recovery across 800+ sites with 50+ person team. Cut repeat SLA violations 35%, closed with 100% audit compliance.</p>
+        <span class="cat">Cost &amp; Risk</span>
+      </div>
+      <div class="ach" data-cat="data">
+        <div class="metric">-25% incidents</div>
+        <h4>ML-Driven Forecasting Pilot</h4>
+        <p>Deployed machine-learning traffic forecasting to prioritize rollout investment — 25% drop in unanticipated congestion, predictive heatmaps for planning.</p>
+        <span class="cat">Data &amp; AI</span>
+      </div>
+      <div class="ach" data-cat="leadership">
+        <div class="metric">4,500-site bid</div>
+        <h4>Strategic Bid Leadership — Digicel Myanmar</h4>
+        <p>Spearheaded technical &amp; financial proposal for a 5-year national program: feasibility, budgeting, spectrum planning, and cost models for final stakeholder evaluation.</p>
+        <span class="cat">Leadership</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience">
+  <div class="container reveal">
+    <div class="eyebrow">Professional Experience</div>
+    <h2>Two decades of delivery.</h2>
+    <p class="section-sub">Tap any role to expand details.</p>
+
+    <div class="timeline">
+
+      <div class="role open">
+        <button class="role-head" onclick="toggleRole(this)">
+          <div class="t">
+            <h4>Technical Data &amp; Testing Strategic Director</h4>
+            <p>Metcoindo Penta Perkasa · Jakarta</p>
+          </div>
+          <span class="yr">2024 — Present</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="role-body">
+          <ul>
+            <li>Led deployment readiness for <b>25+ ZTE data centers</b> nationwide across MEP, transport, QA, and IT domains.</li>
+            <li>Implemented predictive monitoring, AWS dashboards, and Python automation — <b>escalation turnaround cut from 72h to 16h</b>.</li>
+            <li>Maintained <b>98.5% site readiness with &lt;3% cost deviation</b> while accelerating go-live approvals by 60%.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="role">
+        <button class="role-head" onclick="toggleRole(this)">
+          <div class="t">
+            <h4>Technical Program &amp; Solution Lead (Pre-Sales)</h4>
+            <p>Centratama Menara Indonesia · Sumatera</p>
+          </div>
+          <span class="yr">2023 — 2024</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="role-body">
+          <ul>
+            <li>Directed lifecycle planning &amp; execution across <b>9,800+ telecom tower assets</b> — tenant rollout, relocation, dismantle.</li>
+            <li>Achieved <b>8.9% tenant conversion</b> from a 10% target; improved CAPEX efficiency 12%, cut go-live time 18%.</li>
+            <li>Built feasibility scoring tools and execution dashboards for faster risk mitigation and stakeholder confidence.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="role">
+        <button class="role-head" onclick="toggleRole(this)">
+          <div class="t">
+            <h4>Technical Project &amp; Test Operations Manager</h4>
+            <p>Metcoindo Penta Perkasa · National</p>
+          </div>
+          <span class="yr">2020 — 2022</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="role-body">
+          <ul>
+            <li>Managed nationwide fiber rollout &amp; validation with a <b>30+ engineer team</b> across planning, testing, reporting.</li>
+            <li>Deployed automated KPI dashboards (Python, Pandas, Power BI) — <b>weekly reporting time down 40%</b>.</li>
+            <li>Piloted ML traffic forecasting, driving a <b>25% drop in congestion incidents</b> in target zones.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="role">
+        <button class="role-head" onclick="toggleRole(this)">
+          <div class="t">
+            <h4>Project &amp; Program Manager — Transport Optimization</h4>
+            <p>Boston Consulting Group · for Indosat Ooredoo</p>
+          </div>
+          <span class="yr">2019 — 2020</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="role-body">
+          <ul>
+            <li>Led nationwide IP/MPLS &amp; DWDM optimization — <b>22% CAPEX savings</b> via topology redesign and rerouting strategy.</li>
+            <li>Coordinated engineering, finance, procurement &amp; strategy teams, aligning technical insight with investment decisions.</li>
+            <li>Presented executive dashboards and financial updates <b>directly to C-level and steering committee</b>. Closed on time, under budget.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="role">
+        <button class="role-head" onclick="toggleRole(this)">
+          <div class="t">
+            <h4>Project Manager — National KPI Recovery Program</h4>
+            <p>TelkomInfra · Indonesia</p>
+          </div>
+          <span class="yr">2018</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="role-body">
+          <ul>
+            <li>Directed KPI/SLA recovery across <b>800+ telecom sites</b> with a 50+ person cross-functional team.</li>
+            <li>Cut reporting delays 50%; controlled operational budget within <b>&lt;5% deviation</b>.</li>
+            <li>Reduced repeat SLA violations by <b>35%</b>; closed program with 100% site audit compliance.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="role">
+        <button class="role-head" onclick="toggleRole(this)">
+          <div class="t">
+            <h4>Rollout, Optimization &amp; Solutions Leadership</h4>
+            <p>Smart Flow · OneCloud · Ooredoo Myanmar</p>
+          </div>
+          <span class="yr">2012 — 2017</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="role-body">
+          <ul>
+            <li>Led planning &amp; rollout of <b>3,200+ RAN/transmission sites</b> across Myanmar — one of the country's largest national deployments.</li>
+            <li>Cluster-based rollout strategy: <b>30% fewer transmission failures</b>, improved backhaul redundancy nationwide.</li>
+            <li>Regional delivery lead bridging Jakarta–Bangkok teams; <b>solution-based selling</b> bundling software into rollout services (1,200+ fiber sites, 100% first-pass QA).</li>
+            <li>Led and aligned <b>50+ cross-functional staff and contractors</b>; contributed ~12% cost savings through path reuse strategy.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="foundation">
+      <b>Foundation &amp; Technical Growth (2001–2012):</b> deployed telecom infrastructure across
+      Indonesia, Myanmar, Malaysia, Vietnam &amp; Tanzania — 4,000+ site rollouts at &gt;99.99% uptime
+      with global vendors (Ericsson, Huawei, NSN, ZTE). Pioneered cluster-based rollout, improving
+      deployment efficiency by 25%.
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills">
+  <div class="container reveal">
+    <div class="eyebrow">Core Capabilities</div>
+    <h2>Leadership backed by hands-on capability.</h2>
+    <div class="skills-grid" id="skillsGrid">
+      <div class="skill"><div class="top"><span>Multi-Region Program Execution (up to 9,800+ assets)</span><span>92%</span></div><div class="track"><span class="fill" data-w="92"></span></div></div>
+      <div class="skill"><div class="top"><span>Project Lifecycle Management (Planning → Delivery)</span><span>90%</span></div><div class="track"><span class="fill" data-w="90"></span></div></div>
+      <div class="skill"><div class="top"><span>Stakeholder Management &amp; C-Level Reporting</span><span>90%</span></div><div class="track"><span class="fill" data-w="90"></span></div></div>
+      <div class="skill"><div class="top"><span>Cross-Functional Team Leadership (Sales · Tech · Vendor)</span><span>88%</span></div><div class="track"><span class="fill" data-w="88"></span></div></div>
+      <div class="skill"><div class="top"><span>Risk &amp; Cost Control, KPI/SLA Governance</span><span>85%</span></div><div class="track"><span class="fill" data-w="85"></span></div></div>
+      <div class="skill"><div class="top"><span>Python, SQL, Power BI — Reporting &amp; Automation</span><span>80%</span></div><div class="track"><span class="fill" data-w="80"></span></div></div>
+      <div class="skill"><div class="top"><span>Cloud Integration: AWS, Infrastructure Monitoring</span><span>78%</span></div><div class="track"><span class="fill" data-w="78"></span></div></div>
+      <div class="skill"><div class="top"><span>AI, MLOps &amp; Cloud-Driven Delivery (expanding)</span><span>75%</span></div><div class="track"><span class="fill" data-w="75"></span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CERTS + PORTFOLIO ============ -->
+<section id="portfolio">
+  <div class="container reveal">
+    <div class="two-col">
+      <div class="list-card">
+        <h3>Certifications &amp; Tools</h3>
+        <ul>
+          <li><b>AWS Certified Cloud Practitioner</b> — Amazon Web Services (2025)</li>
+          <li><b>PMP® Eligible</b> — Project Management Institute</li>
+          <li><b>Unsupervised ML &amp; Anomaly Detection</b> — QG Academy (2025)</li>
+          <li><b>Data Analysis &amp; Python Automation</b> — DQLab / Dicoding (2024)</li>
+          <li>Python · SQL · BigQuery · Pandas · Power BI</li>
+          <li>AWS · Linux CLI · Docker · KPI Dashboarding</li>
+          <li>Telecom domains: RAN · IP/MPLS · Microwave · Fiber · 5G Validation</li>
+        </ul>
+      </div>
+      <div>
+        <div class="list-card" style="margin-bottom:12px;padding-bottom:14px;border:none;background:transparent">
+          <h3>Live Portfolio</h3>
+        </div>
+        <a class="port-link" href="https://harmony-pm-milzon.streamlit.app" target="_blank" rel="noopener">
+          <h4>Harmony PM — Live Project Monitoring App <span>↗</span></h4>
+          <p>Streamlit-based real-time dashboard for project directors, PMs, and field teams. Built end-to-end by me.</p>
+        </a>
+        <a class="port-link" href="https://milzon1010.github.io/rollout_dashboard" target="_blank" rel="noopener">
+          <h4>Telecom Rollout Dashboard <span>↗</span></h4>
+          <p>Executive dashboard tracking 1,500+ rollout sites — milestone tracking, issue visibility, KPI monitoring.</p>
+        </a>
+        <a class="port-link" href="https://github.com/Milzon1010" target="_blank" rel="noopener">
+          <h4>GitHub — Milzon1010 <span>↗</span></h4>
+          <p>Web tools, automation scripts &amp; data projects. Everything here was built hands-on.</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ARTICLES ============ -->
+<section id="articles">
+  <div class="container reveal">
+    <div class="eyebrow">Insights &amp; Writing</div>
+    <h2>Thinking in public.</h2>
+    <p class="section-sub">Perspectives on transformation, data-driven leadership, and financial protection.</p>
+    <div class="article-grid" id="articleGrid"></div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="container reveal">
+    <div class="contact-band">
+      <h2>Let's talk about what your business needs next.</h2>
+      <p>Available for executive discussions — business leadership, transformation, and B2B portfolio growth.</p>
+      <div class="btn-row">
+        <a class="btn btn-gold" href="mailto:milzon.ltf@gmail.com">✉️ Email Me</a>
+        <a class="btn btn-line" href="https://wa.me/6281262591127" target="_blank" rel="noopener">💬 WhatsApp</a>
+        <a class="btn btn-line" href="https://linkedin.com/in/milzon" target="_blank" rel="noopener">in LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <b>Muhammad Milzon</b> · Jakarta, Indonesia · © 2026<br>
+    Built by hand — HTML/CSS/JS, no template.
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   ARTIKEL — CARA UPDATE (baca ini, Milzon 👇)
+   1. Buka file ini di GitHub → klik ikon pensil (Edit)
+   2. Tambahkan artikel BARU di URUTAN PALING ATAS array di bawah
+   3. Format: { date, title, desc, url }
+      - url bisa link LinkedIn article, Medium, atau file html lain di repo ini
+   4. Commit → selesai. Maksimal 6 terbaru yang tampil otomatis.
+   ============================================================ */
+var ARTICLES = [
+  {
+    date: "Jul 2026",
+    title: "From Telecom Towers to Risk Portfolios: Why Delivery Discipline Transfers",
+    desc: "What 9,800 assets taught me about managing risk at scale — and why the same governance works for B2B insurance.",
+    url: "https://linkedin.com/in/milzon"
+  },
+  {
+    date: "Jun 2026",
+    title: "Cutting Reporting Bureaucracy 75% with Python — a Leadership Story",
+    desc: "Automation is not an IT project. It is a management decision. Here is how we did it.",
+    url: "https://linkedin.com/in/milzon"
+  },
+  {
+    date: "Mei 2026",
+    title: "Backup Income: Financial Protection Explained Without Fear",
+    desc: "How I explain income protection to Indonesian professionals — the goalkeeper analogy.",
+    url: "https://instagram.com/milzon.latief.fin"
+  }
+];
+
+(function renderArticles(){
+  var grid = document.getElementById('articleGrid');
+  ARTICLES.slice(0,6).forEach(function(a){
+    var el = document.createElement('a');
+    el.className = 'article-card';
+    el.href = a.url; el.target = '_blank'; el.rel = 'noopener';
+    el.innerHTML =
+      '<div class="date">' + a.date + '</div>' +
+      '<h4>' + a.title + '</h4>' +
+      '<p>' + a.desc + '</p>' +
+      '<span class="read">Read →</span>';
+    grid.appendChild(el);
+  });
+})();
+
+/* ---- animated counters ---- */
+function animateCount(el){
+  var target = +el.dataset.count, suffix = el.dataset.suffix || '';
+  var dur = 1400, start = null;
+  function step(ts){
+    if(!start) start = ts;
+    var p = Math.min((ts-start)/dur, 1);
+    var eased = 1 - Math.pow(1-p, 3);
+    var val = Math.round(target * eased);
+    el.textContent = val.toLocaleString('en-US') + suffix;
+    if(p < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+/* ---- intersection observer: reveals, counters, skill bars ---- */
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(!e.isIntersecting) return;
+    var el = e.target;
+    if(el.classList.contains('reveal')) el.classList.add('on');
+    if(el.classList.contains('num') && !el.dataset.done){
+      el.dataset.done = 1; animateCount(el);
+    }
+    if(el.classList.contains('fill') && !el.dataset.done){
+      el.dataset.done = 1; el.style.width = el.dataset.w + '%';
+    }
+    io.unobserve(el);
+  });
+},{threshold:.25});
+
+document.querySelectorAll('.reveal, .num, .fill').forEach(function(el){ io.observe(el); });
+
+/* ---- accordion ---- */
+function toggleRole(btn){
+  btn.closest('.role').classList.toggle('open');
+}
+
+/* ---- achievement filter ---- */
+document.querySelectorAll('.chip').forEach(function(chip){
+  chip.addEventListener('click', function(){
+    document.querySelectorAll('.chip').forEach(function(c){ c.classList.remove('active'); });
+    chip.classList.add('active');
+    var f = chip.dataset.filter;
+    document.querySelectorAll('.ach').forEach(function(card){
+      card.classList.toggle('hide', f !== 'all' && card.dataset.cat !== f);
+    });
+  });
+});
+</script>
+</body>
+</html>
